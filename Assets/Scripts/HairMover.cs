@@ -37,7 +37,10 @@ public class HairMover : MonoBehaviour
     // Update is called once per frame
     public void NextScene()
     {
-        StartCoroutine(LoadYourAsyncScene());
+       // SceneManager.MoveGameObjectToScene(hair, SceneManager.GetSceneByName(PlayScene));
+
+        //StartCoroutine(LoadYourAsyncScene());
+        MySceneManager.MoveToScene(PlayScene);
     }
 
     // Start is called before the first frame update
@@ -66,7 +69,7 @@ public class HairMover : MonoBehaviour
     public void Move(Transform newParent)
     {
 
-        this.transform.SetParent(newParent, false);
+        //this.transform.SetParent(newParent, false);
     }
 
 

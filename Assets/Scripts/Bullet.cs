@@ -30,6 +30,12 @@ public class Bullet : MonoBehaviour
     }
     protected virtual void OnTriggerEnter(Collider other)
     {
-        
+        if(other.TryGetComponent<CharacterHealth>(out CharacterHealth _health))
+        {
+            if (_health.DecreaseHealth(_damage))
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 }

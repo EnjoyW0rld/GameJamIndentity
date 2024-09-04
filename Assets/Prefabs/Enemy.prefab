@@ -126,6 +126,8 @@ MonoBehaviour:
   _moveSpeed: 5
   _bulletPrefab: {fileID: 1194131267893926441, guid: 1652b087551d6d247b5d27753e50279d, type: 3}
   _shotBulletsAmount: 5
+  _shootFrequency: 2
+  _bulletSpeed: 2
 --- !u!54 &3833238156658609843
 Rigidbody:
   m_ObjectHideFlags: 0

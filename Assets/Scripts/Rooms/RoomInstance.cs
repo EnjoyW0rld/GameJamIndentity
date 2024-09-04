@@ -33,6 +33,7 @@ public class RoomInstance : MonoBehaviour
         _enemyLeft--;
         if (_enemyLeft <= 0)
         {
+            print("all enemies killed");
             EventManager.Instance.OnAllEnemyKilled?.Invoke(this);
         }
     }

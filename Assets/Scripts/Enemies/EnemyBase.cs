@@ -11,7 +11,8 @@ public class EnemyBase : MonoBehaviour
     protected float _currentHealth;
     private Vector3 _currentDir;
 
-    private void Start()
+
+    protected virtual void Start()
     {
         _rb = GetComponent<Rigidbody>();
         _currentHealth = _maxHealth;
