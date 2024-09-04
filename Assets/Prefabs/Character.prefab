@@ -361,6 +361,7 @@ Transform:
   m_Children:
   - {fileID: 1382185292587198762}
   - {fileID: 5694227028518389848}
+  - {fileID: 1800067334751390621}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3682389732174909737
@@ -378,6 +379,7 @@ MonoBehaviour:
   _bullet: {fileID: 5501052273167105059, guid: c9a440f41ccc3a9468528ca7cc2f0959, type: 3}
   _shootCooldown: 1
   _bulletSpeed: 10
+  _bulletSpawnOffset: {x: 0, y: 0.5, z: 0}
 --- !u!54 &1247305432402166058
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -404,7 +406,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 116
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &4413056017712959000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -455,6 +457,53 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHealth: 5
   _invincibilityDuration: 1
+  _isInvincible: 0
+--- !u!1 &5465921240190840389
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1800067334751390621}
+  - component: {fileID: 8193940665844129488}
+  m_Layer: 0
+  m_Name: InteractionHandle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1800067334751390621
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5465921240190840389}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.75, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4210993535297600272}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8193940665844129488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5465921240190840389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8dc795f8f7a71940b8905e937522fb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interactionRadius: 1
+  _collider: {fileID: 0}
 --- !u!1 &8750846944084849673
 GameObject:
   m_ObjectHideFlags: 0

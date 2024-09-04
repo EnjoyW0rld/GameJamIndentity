@@ -1021,6 +1021,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1448155218
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1448155220}
+  - component: {fileID: 1448155219}
+  m_Layer: 0
+  m_Name: CountManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1448155219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448155218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88978ebb980ffae4bac5a9bc5df88c74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _killedAmount: 0
+  _accuracy: 0
+--- !u!4 &1448155220
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448155218}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 908.3745, y: 621.9959, z: -134.81998}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1952584198
 GameObject:
   m_ObjectHideFlags: 0
@@ -1075,6 +1121,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 184472810362125443, guid: 1516b10cf911eb341ae82a4391cd83eb, type: 3}
+      propertyPath: _isInvincible
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4210993535297600272, guid: 1516b10cf911eb341ae82a4391cd83eb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.42
@@ -1115,6 +1165,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4413056017712959000, guid: 1516b10cf911eb341ae82a4391cd83eb, type: 3}
+      propertyPath: _movementSpeed
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 4421777678466124356, guid: 1516b10cf911eb341ae82a4391cd83eb, type: 3}
       propertyPath: m_Name
       value: Character
@@ -1150,3 +1204,4 @@ SceneRoots:
   - {fileID: 1004198547}
   - {fileID: 942757963}
   - {fileID: 1274786545}
+  - {fileID: 1448155220}

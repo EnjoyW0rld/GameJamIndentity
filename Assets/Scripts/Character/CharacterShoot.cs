@@ -7,6 +7,7 @@ public class CharacterShoot : MonoBehaviour
     [SerializeField] private PlayerBullet _bullet;
     [SerializeField] private float _shootCooldown;
     [SerializeField] protected float _bulletSpeed = 10;
+    [SerializeField] private Vector3 _bulletSpawnOffset = new Vector3(0,.5f,0);
     private Plane _plane;
     private void Start()
     {
@@ -23,7 +24,7 @@ public class CharacterShoot : MonoBehaviour
             {
                 aimPoint = ray.GetPoint(entryPoint);
             }
-            PlayerBullet bullet = Instantiate(_bullet, transform.position, Quaternion.identity);
+            PlayerBullet bullet = Instantiate(_bullet, transform.position + _bulletSpawnOffset, Quaternion.identity);
             Vector3 bulletDir = (aimPoint - transform.position).normalized;
             bulletDir.y = 0;
             bullet.Initialize(bulletDir,_bulletSpeed);

@@ -25,7 +25,7 @@ public class RoomInstance : MonoBehaviour
         for (int i = 0; i < _startEnemyAmount; i++)
         {
             Vector3 spawnPos = new Vector3(Random.Range(-_bounds.extents.x, _bounds.extents.x) + _bounds.center.x, 1f, Random.Range(-_bounds.extents.z, _bounds.extents.z) + _bounds.center.z);
-            EnemyBase enemy = Instantiate(_enemyPrefab, spawnPos, Quaternion.identity);
+            EnemyBase enemy = Instantiate(_enemyPrefab, spawnPos, _enemyPrefab.transform.rotation);
         }
     }
     private void DecreaseEnemyAmount(EnemyBase pEnemy)

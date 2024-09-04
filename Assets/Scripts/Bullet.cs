@@ -9,7 +9,7 @@ public class Bullet : MonoBehaviour
     private float _speed;
     protected int _damage;
     private bool _needDestroy;
-
+    [SerializeField] protected string _obstacleLayer;
 
     public void Initialize(Vector3 pDirection, float pSpeed = 50, int pDamage = 1)
     {
@@ -21,12 +21,16 @@ public class Bullet : MonoBehaviour
     protected virtual void Update()
     {
         transform.position += _direction * Time.deltaTime * _speed;
-        if (_needDestroy) Destroy(gameObject);
+        if (_needDestroy) DoDestroy(false);
     }
     private IEnumerator DespawnCooldown(float pDestructonTime)
     {
         yield return new WaitForSeconds(5);
         _needDestroy = true;
+    }
+    protected virtual void DoDestroy(bool pShotEntity)
+    {
+        Destroy(gameObject);
     }
     protected virtual void OnTriggerEnter(Collider other)
     {
@@ -36,6 +40,10 @@ public class Bullet : MonoBehaviour
             {
                 Destroy(gameObject);
             }
+        }
+        if(other.gameObject.layer == LayerMask.NameToLayer(_obstacleLayer))
+        {
+            DoDestroy(false);
         }
     }
 }

@@ -33,7 +33,7 @@ public class Enemy360Shoot : EnemyBase
         Vector3 projDir = new Vector3(1, 0, 0);
         for (int i = 0; i < _shotBulletsAmount; i++)
         {
-            Bullet spawnedBullet = Instantiate(_bulletPrefab, transform.position, Quaternion.identity);
+            Bullet spawnedBullet = Instantiate(_bulletPrefab, transform.position, _bulletPrefab.transform.rotation);
             spawnedBullet.Initialize(Quaternion.Euler(0, degree * i, 0) * projDir,_bulletSpeed);
         }
     }

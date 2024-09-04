@@ -19,7 +19,7 @@ public class CharacterMover : MonoBehaviour
         float zAxis = Input.GetAxisRaw("Vertical");
         Vector3 velocity = new Vector3(xAxis,0, zAxis);
         velocity.Normalize();
-        _rb.velocity = velocity * _movementSpeed * Time.deltaTime;
+        _rb.velocity = velocity * _movementSpeed;
     }
     public void SetCanMoveMode(bool pMoveMode)
     {

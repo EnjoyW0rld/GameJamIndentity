@@ -119,3 +119,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 416d711f6aa50654e906bf4cba2646c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _obstacleLayer: Obstacle
