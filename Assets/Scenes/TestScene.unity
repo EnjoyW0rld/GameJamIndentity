@@ -1566,6 +1566,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _killedAmount: 0
   _accuracy: 0
+  _obssesivnes: 0
 --- !u!4 &1448155220
 Transform:
   m_ObjectHideFlags: 0
@@ -2049,10 +2050,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 184472810362125443, guid: 1516b10cf911eb341ae82a4391cd83eb, type: 3}
-      propertyPath: _isInvincible
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4210993535297600272, guid: 1516b10cf911eb341ae82a4391cd83eb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.42

@@ -828,7 +828,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _startEnemyAmount: 5
-  _enemyPrefab: {fileID: 2791860348103934184, guid: 1b711f21fa8e8e24db2b72c21f420411, type: 3}
+  _enemyPrefab: {fileID: 5814792139968807006, guid: edcaa940af6c85f41898ee1d0eed5e2c, type: 3}
   _bounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 8.46, y: 0, z: 4.74}

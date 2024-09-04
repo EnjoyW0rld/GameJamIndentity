@@ -350,8 +350,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5120947858666836403}
   - component: {fileID: 4092457114754823539}
-  - component: {fileID: 2791860348103934184}
   - component: {fileID: 3833238156658609843}
+  - component: {fileID: 5814792139968807006}
   m_Layer: 0
   m_Name: basicGhoul
   m_TagString: Untagged
@@ -400,24 +400,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2791860348103934184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6972400225210467023}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c6679cce91846748be0afac94d1ad6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _maxHealth: 3
-  _moveSpeed: 5
-  _bulletPrefab: {fileID: 1194131267893926441, guid: 1652b087551d6d247b5d27753e50279d, type: 3}
-  _shotBulletsAmount: 5
-  _shootFrequency: 2
-  _bulletSpeed: 2
 --- !u!54 &3833238156658609843
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -445,3 +427,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!114 &5814792139968807006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6972400225210467023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1701f2d415e588044b17d57089a3dcab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealth: 3
+  _moveSpeed: 4
+  _coin: {fileID: 4366635425669110940, guid: 7881bf8306895eb45900237804e410aa, type: 3}
+  _shootFrequency: 2
+  _bulletPrefab: {fileID: 1194131267893926441, guid: e1a25b85cc11b2e48a070a1ffaed264f, type: 3}
+  _bulletSpeed: 2

@@ -7,9 +7,12 @@ public class CounterManager : MonoBehaviour
     private static CounterManager _instance;
     public static CounterManager Instance { get { return _instance; } }
 
-    [SerializeField]private int _killedAmount;
-    [SerializeField]private int _accuracy;
+    [SerializeField] private int _killedAmount;
+    [SerializeField] private int _accuracy;
+    [SerializeField] private int _obssesivnes;
 
+    private CharacterMover _characterMover;
+    public CharacterMover CharacterMover { get { return _characterMover; } }
     private void Awake()
     {
         if (_instance != null && _instance != this)
@@ -21,10 +24,19 @@ public class CounterManager : MonoBehaviour
     private void Start()
     {
         EventManager.Instance.OnEnemyKilled.AddListener(AddToKillAmount);
+        _characterMover = FindObjectOfType<CharacterMover>();
+    }
+    public void ChangeObsessivnes(int pValueToAdd)
+    {
+        _obssesivnes += pValueToAdd;
+    }
+    public void ChangeKillAmout(int pValueToAdd)
+    {
+        _killedAmount += pValueToAdd;
     }
     private void AddToKillAmount(EnemyBase pBaseEnemy)
     {
-        _killedAmount++;
+        ChangeKillAmout(1);
     }
     public void ChangeAccuracy(bool pDidHit)
     {

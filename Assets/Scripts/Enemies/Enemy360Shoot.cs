@@ -34,7 +34,7 @@ public class Enemy360Shoot : EnemyBase
         for (int i = 0; i < _shotBulletsAmount; i++)
         {
             Bullet spawnedBullet = Instantiate(_bulletPrefab, transform.position, _bulletPrefab.transform.rotation);
-            spawnedBullet.Initialize(Quaternion.Euler(0, degree * i, 0) * projDir,_bulletSpeed);
+            spawnedBullet.Initialize((Quaternion.Euler(0, degree * i, 0) * projDir).normalized,_bulletSpeed);
         }
     }
 }

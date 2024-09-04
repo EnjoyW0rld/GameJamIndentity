@@ -25,10 +25,6 @@ public class RoomsManager : MonoBehaviour
         _currentRoom = Instantiate(_roomInstances[Random.Range(0, _roomInstances.Length)]);
         _character.transform.position = _currentRoom.PlayerSpawnPoint;
     }
-    private void Update()
-    {
-        print(_currentRoom == null);
-    }
     private void ResetRoom()
     {
         print("destroying");

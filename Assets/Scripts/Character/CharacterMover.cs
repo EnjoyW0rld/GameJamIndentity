@@ -25,4 +25,11 @@ public class CharacterMover : MonoBehaviour
     {
         _canMove = pMoveMode;
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.TryGetComponent<CoinCollectible>(out var coin))
+        {
+            coin.Interact();
+        }
+    }
 }

@@ -7,6 +7,7 @@ public class EnemyBase : MonoBehaviour
 {
     [SerializeField, Min(1)] private float _maxHealth;
     [SerializeField] private float _moveSpeed;
+    [SerializeField] private CoinCollectible _coin;
     private Rigidbody _rb;
     protected float _currentHealth;
     private Vector3 _currentDir;
@@ -31,7 +32,10 @@ public class EnemyBase : MonoBehaviour
             yield return new WaitForSeconds(pFrequency);
         }
     }
-
+    public void InstaKill()
+    {
+        DestroyThis();
+    }
     public void DoDamage(int pDamageAmount)
     {
         _currentHealth -= pDamageAmount;
@@ -43,6 +47,8 @@ public class EnemyBase : MonoBehaviour
     private void DestroyThis()
     {
         EventManager.Instance.OnEnemyKilled?.Invoke(this);
-        gameObject.SetActive(false);
+        Instantiate(_coin, transform.position, _coin.transform.rotation);
+        //gameObject.SetActive(false);
+        Destroy(gameObject);
     }
 }

@@ -16,10 +16,15 @@ public class CharacterInteraction : MonoBehaviour
             if (_collisions == null || _collisions.Length == 0) return;
             for (int i = 0; i < _collisions.Length; i++)
             {
-                if (_collisions[i].TryGetComponent<Interactable>(out Interactable interactable))
+                if (_collisions[i].TryGetComponent<EnemyBase>(out var enemy))
+                {
+                    enemy.InstaKill();
+                    CounterManager.Instance.ChangeKillAmout(-3);
+                }
+                /*if (_collisions[i].TryGetComponent<Interactable>(out Interactable interactable))
                 {
                     interactable.DoInteraction();
-                }
+                }*/
             }
         }
     }
