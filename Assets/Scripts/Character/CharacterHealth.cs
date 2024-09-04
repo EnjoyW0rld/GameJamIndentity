@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CharacterHealth : MonoBehaviour
 {
@@ -8,15 +9,19 @@ public class CharacterHealth : MonoBehaviour
     [SerializeField] private float _invincibilityDuration;
     private int _currentHealth;
     [SerializeField]private bool _isInvincible;
+    public UnityEvent OnDamageTaken;
 
     private void Start()
     {
+        if (OnDamageTaken == null) OnDamageTaken = new UnityEvent();
         _currentHealth = _maxHealth;
     }
     public bool DecreaseHealth(int pDamage)
     {
         if (_isInvincible) return false;
         _currentHealth -= pDamage;
+        print("taken damage");
+        OnDamageTaken?.Invoke();
         StartCoroutine(InvincibilityCooldown());
         if (_currentHealth <= 0)
         {

@@ -11,6 +11,10 @@ public class CounterManager : MonoBehaviour
     [SerializeField] private int _accuracy;
     [SerializeField] private int _obssesivnes;
 
+    public int KilledAmount { get { return _killedAmount; } }
+    public int Accuracy { get { return _accuracy; } }
+    public int Obsesivnes { get { return _obssesivnes; } }
+
     private CharacterMover _characterMover;
     public CharacterMover CharacterMover { get { return _characterMover; } }
     private void Awake()
