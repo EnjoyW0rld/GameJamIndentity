@@ -15,9 +15,22 @@ public class DungeonOutlineGenerator : MonoBehaviour
     }
     private void DoDungeonTwo()
     {
-        int direction = Random.Range(0, 5);
         Vector2 currentTile = Vector2.zero;
         bool spawned = false;
+        while (!spawned)
+        {
+            int direction = Random.Range(0, 4);
+            Vector2 dir = Vector2.zero;
+            if (direction == 3) dir.x = -1;
+            else if (direction == 1) dir.x = 1;
+            if (direction == 0) dir.y = -1;
+            else if (direction == 2) dir.y = 1;
+
+            if (dir.x + currentTile.x < _xExtent || dir.x + currentTile.x >= 0)
+            {
+                //if (_placedRooms[dir.x + currentTile.x,dir.y + currentTile.y] == 0)
+            }
+        }
     }
     private void DoDungeon()
     {
