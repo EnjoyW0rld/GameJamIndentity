@@ -7,8 +7,9 @@ public class Enemy360Shoot : EnemyBase
     [SerializeField] private Bullet _bulletPrefab;
     [SerializeField] private int _shotBulletsAmount;
 
-    private void Update()
+    protected override void Update()
     {
+        base.Update();
         if (Input.GetKeyDown(KeyCode.P)) DoShoot();
     }
     private void DoShoot()

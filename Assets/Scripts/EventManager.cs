@@ -9,6 +9,7 @@ public class EventManager : MonoBehaviour
     public static EventManager Instance { get { return _instance; } }
 
     public UnityEvent<EnemyBase> OnEnemyKilled;
+    public UnityEvent<RoomInstance> OnAllEnemyKilled;
     private void Awake()
     {
         if (_instance != null || _instance != this)
@@ -20,5 +21,6 @@ public class EventManager : MonoBehaviour
     private void Start()
     {
         OnEnemyKilled = new UnityEvent<EnemyBase>();
+        OnAllEnemyKilled = new UnityEvent<RoomInstance>();
     }
 }
