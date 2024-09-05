@@ -438,6 +438,7 @@ GameObject:
   - component: {fileID: 4092457114754823539}
   - component: {fileID: 3833238156658609843}
   - component: {fileID: 5814792139968807006}
+  - component: {fileID: 2164545914362596774}
   m_Layer: 0
   m_Name: basicGhoul
   m_TagString: Untagged
@@ -561,6 +562,27 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!95 &2164545914362596774
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6972400225210467023}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c301f3b9756e69547a7b632e9f33a0bf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7696634894288983780
 GameObject:
   m_ObjectHideFlags: 0
