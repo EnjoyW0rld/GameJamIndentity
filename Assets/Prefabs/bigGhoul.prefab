@@ -41,7 +41,7 @@ AudioSource:
   m_GameObject: {fileID: 1477322140908245568}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -5527480750537961724, guid: a4f14b138d2df85428ca1a4562d1f65f, type: 2}
   m_audioClip: {fileID: 8300000, guid: b42abe0136efa0b45afb57bac46966ed, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -277,7 +277,7 @@ AudioSource:
   m_GameObject: {fileID: 4303099009193165768}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -5527480750537961724, guid: a4f14b138d2df85428ca1a4562d1f65f, type: 2}
   m_audioClip: {fileID: 8300000, guid: 2c0c296728d3f384999d5fc9b461d545, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -526,7 +526,19 @@ MonoBehaviour:
   _coin: {fileID: 4366635425669110940, guid: 7881bf8306895eb45900237804e410aa, type: 3}
   OnDamageTaken:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7171885858902827659}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _bulletPrefab: {fileID: 1194131267893926441, guid: 1652b087551d6d247b5d27753e50279d, type: 3}
   _shotBulletsAmount: 5
   _shootFrequency: 2
@@ -538,6 +550,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
         m_MethodName: Play
         m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: bigGhoul_Attack
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7171885858902827659}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
