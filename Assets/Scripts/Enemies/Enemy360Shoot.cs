@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Enemy360Shoot : EnemyBase
 {
@@ -9,9 +10,12 @@ public class Enemy360Shoot : EnemyBase
     [SerializeField] private float _shootFrequency;
     [SerializeField] private float _bulletSpeed;
 
+    public UnityEvent OnEnemyShoots;
+
     protected override void Start()
     {
         base.Start();
+        if (OnEnemyShoots == null) OnEnemyShoots = new UnityEvent();
         StartCoroutine(DoShooting());
     }
     protected override void Update()
@@ -24,6 +28,7 @@ public class Enemy360Shoot : EnemyBase
         while(this != null)
         {
             yield return new WaitForSeconds(_shootFrequency);
+            OnEnemyShoots?.Invoke();
             Shoot();
         }
     }

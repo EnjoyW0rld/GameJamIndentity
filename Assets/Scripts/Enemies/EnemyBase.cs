@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Collider), typeof(Rigidbody))]
 public class EnemyBase : MonoBehaviour
@@ -11,12 +12,13 @@ public class EnemyBase : MonoBehaviour
     private Rigidbody _rb;
     protected float _currentHealth;
     private Vector3 _currentDir;
-
+    public UnityEvent OnDamageTaken;
 
     protected virtual void Start()
     {
         _rb = GetComponent<Rigidbody>();
         _currentHealth = _maxHealth;
+        if (OnDamageTaken == null) OnDamageTaken = new UnityEvent();
         StartCoroutine(ChangeDirection(3));
     }
     protected virtual void Update()
@@ -39,6 +41,7 @@ public class EnemyBase : MonoBehaviour
     public void DoDamage(int pDamageAmount)
     {
         _currentHealth -= pDamageAmount;
+        OnDamageTaken?.Invoke();
         if (_currentHealth <= 0)
         {
             DestroyThis();

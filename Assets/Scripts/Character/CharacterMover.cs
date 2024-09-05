@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Rigidbody))]
 public class CharacterMover : MonoBehaviour
@@ -8,8 +9,10 @@ public class CharacterMover : MonoBehaviour
     [SerializeField] private float _movementSpeed = 500;
     private Rigidbody _rb;
     private bool _canMove = true;
+    public UnityEvent OnCoinCollected;
     private void Start()
     {
+        if (OnCoinCollected == null) OnCoinCollected = new UnityEvent();
         _rb = GetComponent<Rigidbody>();
     }
     private void Update()
@@ -30,6 +33,7 @@ public class CharacterMover : MonoBehaviour
         if(other.TryGetComponent<CoinCollectible>(out var coin))
         {
             coin.Interact();
+            OnCoinCollected?.Invoke();
         }
     }
 }

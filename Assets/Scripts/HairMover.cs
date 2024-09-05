@@ -48,7 +48,9 @@ public class HairMover : MonoBehaviour
     {
         if (instance != null && instance != this)
         {
-            Destroy(instance.gameObject);
+            //instance = null;
+            //Destroy(gameObject);
+            //return;
         }
         DontDestroyOnLoad(gameObject);
         instance = this;
@@ -57,8 +59,16 @@ public class HairMover : MonoBehaviour
 
     private void SceneChange(Scene prevScene, Scene nextScene)
     {
+        if (prevScene.name == "TestScene")
+        {
+            //DestroyImmediate(instance.gameObject);
+            //Destroy(instance.gameObject);
+            SceneManager.activeSceneChanged -= this.SceneChange;
+            instance = null;
+            return;
+        }
 
-        Debug.Log(nextScene);
+        Debug.Log(nextScene.name);
         hairOriginal = GameObject.FindGameObjectWithTag("Hair");
         HairTransform = hairOriginal.GetComponent<Transform>();
         Move(HairTransform);

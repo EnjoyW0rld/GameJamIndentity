@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class FronBurstEnemy : EnemyBase
 {
@@ -9,10 +10,13 @@ public class FronBurstEnemy : EnemyBase
     [SerializeField] private float _shootFrequency;
     [SerializeField] private float _bulletSpeed;
     private Transform _playerTransform;
+
+    public UnityEvent OnEnemyShoots;
     protected override void Start()
     {
         base.Start();
         _playerTransform = CounterManager.Instance.CharacterMover.transform;
+        if (OnEnemyShoots == null) OnEnemyShoots = new UnityEvent();
         StartCoroutine(DoShoot());
     }
     protected override void Update()
@@ -21,9 +25,10 @@ public class FronBurstEnemy : EnemyBase
     }
     private IEnumerator DoShoot()
     {
-        while(this != null)
+        while (this != null)
         {
             yield return new WaitForSeconds(_shootFrequency);
+            OnEnemyShoots?.Invoke();
             StartCoroutine(DoBurst());
         }
     }

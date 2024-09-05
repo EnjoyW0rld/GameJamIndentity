@@ -1,19 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class VShapeShootEnemy : EnemyBase
 {
     [SerializeField] private float _shootFrequency;
     [SerializeField] private Bullet _bulletPrefab;
     [SerializeField] private float _bulletSpeed;
-
+    public UnityEvent OnEnemyShoots;
 
     private Transform _character;
     protected override void Start()
     {
         base.Start();
         _character = CounterManager.Instance.CharacterMover.transform;
+        if (OnEnemyShoots == null) OnEnemyShoots = new UnityEvent();
         StartCoroutine(DoShooting());
     }
     protected override void Update()
@@ -25,6 +27,7 @@ public class VShapeShootEnemy : EnemyBase
         while (this != null)
         {
             Shoot();
+            OnEnemyShoots?.Invoke();
             yield return new WaitForSeconds(_shootFrequency);
         }
     }
