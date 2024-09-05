@@ -2367,8 +2367,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10.000002, y: 2.2204466e-16, z: 12.73}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 10.000002, y: 4.9663696, z: 12.73}
+  m_Center: {x: -6.6165335e-15, y: -2.4831848, z: -3.9362735e-15}
 --- !u!54 &8618848646556069564
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6329,8 +6329,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 7.54, y: 2.2204466e-16, z: 13.19}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 7.5399995, y: 4.16137, z: 13.19}
+  m_Center: {x: -3.580968e-14, y: -2.080688, z: 0}
 --- !u!54 &3864976446742027162
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14132,7 +14132,7 @@ MonoBehaviour:
   - {fileID: 2791860348103934184, guid: 1b711f21fa8e8e24db2b72c21f420411, type: 3}
   - {fileID: 1435482208338375482, guid: b28cf47e5899bb1479e9a1cb460579be, type: 3}
   _bounds:
-    m_Center: {x: 0, y: 0, z: 0}
+    m_Center: {x: 0, y: 0, z: -0.15}
     m_Extent: {x: 8.46, y: 0, z: 4.74}
   _playerSpawnPos: {x: -6.36, y: 0, z: 0}
 --- !u!1 &7832943576597375145
@@ -15214,8 +15214,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 11.1, y: 2.2204466e-16, z: 10.000002}
-  m_Center: {x: 0.000000029802322, y: 0, z: 0}
+  m_Size: {x: 11.1, y: 4.7966623, z: 10.000002}
+  m_Center: {x: 0, y: -2.3983316, z: 5.9307745e-13}
 --- !u!54 &6927413558452547099
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -15886,8 +15886,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10.000002, y: 2.2204466e-16, z: 13.45}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 10.000002, y: 4.784723, z: 13.450001}
+  m_Center: {x: -4.61193e-13, y: -2.3923614, z: 3.069838e-14}
 --- !u!54 &4785007604558709581
 Rigidbody:
   m_ObjectHideFlags: 0

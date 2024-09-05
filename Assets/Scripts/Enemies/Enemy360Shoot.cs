@@ -16,7 +16,7 @@ public class Enemy360Shoot : EnemyBase
     }
     protected override void Update()
     {
-        base.Update();
+        //base.Update();
         //if (Input.GetKeyDown(KeyCode.P)) DoShoot();
     }
     private IEnumerator DoShooting()
