@@ -138,6 +138,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5825462810384476705}
   - component: {fileID: 4399119062467610862}
+  - component: {fileID: 8705711268693962307}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -214,6 +215,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &8705711268693962307
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3663340953902174751}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b7ada354fc0ca46449d34af46a43bf6a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4303099009193165768
 GameObject:
   m_ObjectHideFlags: 0
@@ -438,6 +460,7 @@ GameObject:
   - component: {fileID: 4092457114754823539}
   - component: {fileID: 2791860348103934184}
   - component: {fileID: 3833238156658609843}
+  - component: {fileID: 712200516266173486}
   m_Layer: 0
   m_Name: bigGhoul
   m_TagString: Untagged
@@ -532,6 +555,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!95 &712200516266173486
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6972400225210467023}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: df8dee8af4be6504fafb8a0b31303982, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8641145138172022154
 GameObject:
   m_ObjectHideFlags: 0
