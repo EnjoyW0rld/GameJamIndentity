@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CharacterShoot : MonoBehaviour
 {
@@ -8,9 +9,12 @@ public class CharacterShoot : MonoBehaviour
     [SerializeField] private float _shootCooldown;
     [SerializeField] protected float _bulletSpeed = 10;
     [SerializeField] private Vector3 _bulletSpawnOffset = new Vector3(0,.5f,0);
+    public UnityEvent OnPlayerShot;
+
     private Plane _plane;
     private void Start()
     {
+        if (OnPlayerShot == null) OnPlayerShot = new UnityEvent();
         _plane = new Plane(Vector3.up, Vector3.zero);
     }
     private void Update()
@@ -28,6 +32,7 @@ public class CharacterShoot : MonoBehaviour
             Vector3 bulletDir = (aimPoint - transform.position).normalized;
             bulletDir.y = 0;
             bullet.Initialize(bulletDir,_bulletSpeed);
+            OnPlayerShot?.Invoke();
         }
     }
 }

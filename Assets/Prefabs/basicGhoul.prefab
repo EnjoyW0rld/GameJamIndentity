@@ -528,9 +528,15 @@ MonoBehaviour:
   _maxHealth: 3
   _moveSpeed: 4
   _coin: {fileID: 4366635425669110940, guid: 7881bf8306895eb45900237804e410aa, type: 3}
+  OnDamageTaken:
+    m_PersistentCalls:
+      m_Calls: []
   _shootFrequency: 2
   _bulletPrefab: {fileID: 1194131267893926441, guid: e1a25b85cc11b2e48a070a1ffaed264f, type: 3}
   _bulletSpeed: 2
+  OnEnemyShoots:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7696634894288983780
 GameObject:
   m_ObjectHideFlags: 0

@@ -67,6 +67,10 @@ public class HairMover : MonoBehaviour
             instance = null;
             return;
         }
+        if (instance == null)
+        {
+            return;
+        }
 
         Debug.Log(nextScene.name);
         hairOriginal = GameObject.FindGameObjectWithTag("Hair");
@@ -87,10 +91,8 @@ public class HairMover : MonoBehaviour
         this.transform.SetParent(newParent, false);
     }
 
-
-    // Update is called once per frame
-    void Update()
+    private void OnDestroy()
     {
-
+        SceneManager.activeSceneChanged -= SceneChange;
     }
 }

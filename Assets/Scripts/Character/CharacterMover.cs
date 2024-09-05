@@ -10,9 +10,12 @@ public class CharacterMover : MonoBehaviour
     private Rigidbody _rb;
     private bool _canMove = true;
     public UnityEvent OnCoinCollected;
+    public UnityEvent OnPlayerMoving;
+    [SerializeField] private Animator _animator;
     private void Start()
     {
         if (OnCoinCollected == null) OnCoinCollected = new UnityEvent();
+        if (OnPlayerMoving == null) OnPlayerMoving = new UnityEvent();
         _rb = GetComponent<Rigidbody>();
     }
     private void Update()
@@ -23,6 +26,7 @@ public class CharacterMover : MonoBehaviour
         Vector3 velocity = new Vector3(xAxis,0, zAxis);
         velocity.Normalize();
         _rb.velocity = velocity * _movementSpeed;
+        if (velocity.magnitude > .1f) OnPlayerMoving?.Invoke();
     }
     public void SetCanMoveMode(bool pMoveMode)
     {

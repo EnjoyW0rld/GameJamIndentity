@@ -524,10 +524,28 @@ MonoBehaviour:
   _maxHealth: 3
   _moveSpeed: 5
   _coin: {fileID: 4366635425669110940, guid: 7881bf8306895eb45900237804e410aa, type: 3}
+  OnDamageTaken:
+    m_PersistentCalls:
+      m_Calls: []
   _bulletPrefab: {fileID: 1194131267893926441, guid: 1652b087551d6d247b5d27753e50279d, type: 3}
   _shotBulletsAmount: 5
   _shootFrequency: 2
   _bulletSpeed: 2
+  OnEnemyShoots:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 712200516266173486}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: bigGhoul_Attack
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!54 &3833238156658609843
 Rigidbody:
   m_ObjectHideFlags: 0
