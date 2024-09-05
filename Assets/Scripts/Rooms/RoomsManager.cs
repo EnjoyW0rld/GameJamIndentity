@@ -23,7 +23,7 @@ public class RoomsManager : MonoBehaviour
             return;
         }
         _currentRoom = Instantiate(_roomInstances[Random.Range(0, _roomInstances.Length)]);
-        _character.transform.position = _currentRoom.PlayerSpawnPoint;
+        //_character.transform.position = _currentRoom.PlayerSpawnPoint;
     }
     private void ResetRoom()
     {

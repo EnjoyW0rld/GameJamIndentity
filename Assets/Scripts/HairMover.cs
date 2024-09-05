@@ -12,7 +12,7 @@ public class HairMover : MonoBehaviour
     Transform HairTransform;
 
     string sceneName;
-
+    private static HairMover instance;
 
     IEnumerator LoadYourAsyncScene()
     {
@@ -37,7 +37,7 @@ public class HairMover : MonoBehaviour
     // Update is called once per frame
     public void NextScene()
     {
-       // SceneManager.MoveGameObjectToScene(hair, SceneManager.GetSceneByName(PlayScene));
+        // SceneManager.MoveGameObjectToScene(hair, SceneManager.GetSceneByName(PlayScene));
 
         //StartCoroutine(LoadYourAsyncScene());
         MySceneManager.MoveToScene(PlayScene);
@@ -46,8 +46,13 @@ public class HairMover : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (instance != null && instance != this)
+        {
+            Destroy(instance.gameObject);
+        }
+        DontDestroyOnLoad(gameObject);
+        instance = this;
         SceneManager.activeSceneChanged += SceneChange;
-
     }
 
     private void SceneChange(Scene prevScene, Scene nextScene)
@@ -69,13 +74,13 @@ public class HairMover : MonoBehaviour
     public void Move(Transform newParent)
     {
 
-        //this.transform.SetParent(newParent, false);
+        this.transform.SetParent(newParent, false);
     }
 
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
